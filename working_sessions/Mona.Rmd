@@ -101,3 +101,25 @@ grouped <- interviews %>%
   summarise(mean = mean(no_membrs), max(no_membrs)) %>% 
   ungroup()
 ```
+
+```{r}
+unique_varibles<-interviews %>% 
+  group_by(village) %>% 
+  count()
+
+```
+
+```{r}
+m<-interviews %>% 
+  group_by(no_meals) %>% 
+  summarise(
+    count=n()
+  )
+```
+
+```{r}
+interview_meals_count<-interviews %>% 
+  group_by(no_meals) %>% 
+  count()
+
+```
